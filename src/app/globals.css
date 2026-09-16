@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14181f;
+  --color-slate: #232b36;
+  --color-off: #eceae3;
+  --color-amber: #f4b740;
+  --color-amber-dark: #d99f2e;
+  --color-blue: #5b8cff;
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-off);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.highlight-sweep {
+  background-image: linear-gradient(var(--color-amber), var(--color-amber));
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  color: var(--color-ink);
+  border-radius: 3px;
+  padding: 0.05em 0.2em;
+  margin: 0 -0.2em;
+  animation: highlight-sweep-in 0.9s 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes highlight-sweep-in {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .highlight-sweep {
+    animation: none;
+    background-size: 100% 100%;
+  }
+}
