@@ -23,9 +23,61 @@ html {
 }
 
 body {
+  position: relative;
   background: var(--color-ink);
   color: var(--color-off);
   font-family: var(--font-body);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hairline {
+  position: relative;
+}
+
+.hairline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(236, 234, 227, 0.16) 25%,
+    rgba(236, 234, 227, 0.16) 75%,
+    transparent
+  );
+}
+
+.edge-fade {
+  background: linear-gradient(
+    180deg,
+    rgba(236, 234, 227, 0.14),
+    rgba(236, 234, 227, 0.03)
+  );
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.25s ease;
+}
+
+.link-underline:hover {
+  background-size: 100% 1px;
 }
 
 ::selection {

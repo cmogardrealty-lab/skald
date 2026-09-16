@@ -23,7 +23,7 @@ export function HowItWorks() {
     <section
       id="how-it-works"
       aria-labelledby="how-it-works-heading"
-      className="border-t border-off/10 py-20 sm:py-28"
+      className="hairline scroll-mt-20 py-20 sm:py-28"
     >
       <Container>
         <h2

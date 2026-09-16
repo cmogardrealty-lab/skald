@@ -2,7 +2,7 @@ import { Container } from "./container";
 
 export function Stakes() {
   return (
-    <section aria-labelledby="stakes-heading" className="border-t border-off/10 py-20 sm:py-28">
+    <section aria-labelledby="stakes-heading" className="hairline py-20 sm:py-28">
       <Container>
         <h2
           id="stakes-heading"

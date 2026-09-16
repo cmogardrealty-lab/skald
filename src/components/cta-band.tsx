@@ -4,7 +4,7 @@ import { AUDIT_MAILTO } from "@/lib/site-config";
 
 export function CtaBand() {
   return (
-    <section aria-labelledby="cta-heading" className="border-t border-off/10 bg-slate py-20">
+    <section aria-labelledby="cta-heading" className="hairline bg-slate py-20">
       <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
         <h2
           id="cta-heading"
@@ -15,7 +15,7 @@ export function CtaBand() {
         </h2>
         <Link
           href={AUDIT_MAILTO}
-          className="shrink-0 rounded-md bg-amber px-6 py-3 text-base font-medium text-ink transition-colors hover:bg-amber-dark"
+          className="shrink-0 rounded-md bg-amber px-6 py-3 text-base font-medium text-ink shadow-[0_10px_30px_-10px_rgba(244,183,64,0.6)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-dark hover:shadow-[0_14px_36px_-8px_rgba(244,183,64,0.7)] active:translate-y-0"
         >
           Get a free audit
         </Link>

@@ -2,7 +2,7 @@ import { Container } from "./container";
 
 export function ToolAssisted() {
   return (
-    <section aria-labelledby="tool-assisted-heading" className="border-t border-off/10 py-20 sm:py-28">
+    <section aria-labelledby="tool-assisted-heading" className="hairline py-20 sm:py-28">
       <Container>
         <h2
           id="tool-assisted-heading"

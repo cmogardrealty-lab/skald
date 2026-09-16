@@ -9,7 +9,7 @@ const CATEGORIES = [
 
 export function Proof() {
   return (
-    <section aria-labelledby="proof-heading" className="border-t border-off/10 py-20 sm:py-28">
+    <section aria-labelledby="proof-heading" className="hairline py-20 sm:py-28">
       <Container>
         <h2
           id="proof-heading"
@@ -31,34 +31,34 @@ export function Proof() {
               <div key={category.label}>
                 <div className="flex items-baseline justify-between text-sm text-off/60">
                   <span>{category.label}</span>
-                  <span>
-                    {category.before} <span className="text-off/50">to</span>{" "}
+                  <span className="tabular-nums">
+                    {category.before} <span className="text-off/40">to</span>{" "}
                     <span className="font-medium text-off">{category.after}</span>
                   </span>
                 </div>
-                <div className="mt-2 h-2 w-full rounded-full bg-off/10">
+                <div className="relative mt-3 h-1.5 w-full rounded-full bg-off/10">
                   <div
-                    className="h-2 rounded-full bg-off/25"
-                    style={{ width: `${category.before}%` }}
-                  />
-                </div>
-                <div className="mt-1 h-2 w-full rounded-full bg-off/10">
-                  <div
-                    className="h-2 rounded-full bg-amber"
+                    className="h-1.5 rounded-full bg-gradient-to-r from-amber-dark to-amber"
                     style={{ width: `${category.after}%` }}
+                  />
+                  <div
+                    className="absolute top-1/2 h-3 w-[3px] -translate-y-1/2 rounded-full bg-off/60"
+                    style={{ left: `calc(${category.before}% - 1.5px)` }}
                   />
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="rounded-lg border border-off/10 bg-slate p-6 sm:p-8">
-            <p className="text-sm font-medium text-off/60">AI citation check</p>
-            <p className="mt-4 text-off/60">March: not mentioned.</p>
-            <p className="mt-2 text-lg text-off">
-              June:{" "}
-              <mark className="rounded bg-amber px-1 text-ink">cited.</mark>
-            </p>
+          <div className="rounded-[13px] bg-gradient-to-br from-off/20 via-off/5 to-transparent p-px">
+            <div className="rounded-[12px] bg-slate p-6 sm:p-8">
+              <p className="text-sm font-medium text-off/60">AI citation check</p>
+              <p className="mt-4 text-off/60">March: not mentioned.</p>
+              <p className="mt-2 text-lg text-off">
+                June:{" "}
+                <mark className="rounded bg-amber px-1 text-ink">cited.</mark>
+              </p>
+            </div>
           </div>
         </div>
 
