@@ -47,12 +47,13 @@ export function Work() {
             </article>
 
             <article className="rounded-lg border border-off/10 p-6">
-              <PlaceholderMedia label="Video placeholder" />
+              <PlaceholderMedia label="Screenshot placeholder" />
               <h3 className="mt-4 font-display text-lg font-semibold text-off">
-                Listing video
+                Content system
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-off/60">
-                Cinematic property reels, shot and cut in house.
+                Structured content and schema built to be legible to AI
+                answer engines, not just search crawlers.
               </p>
             </article>
 

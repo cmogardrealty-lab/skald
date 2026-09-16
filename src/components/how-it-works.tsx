@@ -32,33 +32,21 @@ export function HowItWorks() {
         >
           Audit. Re-imagine. Grow.
         </h2>
-        <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <span className="font-display text-sm text-off/60">
-              {MOVES[0].number}
-            </span>
-            <h3 className="mt-2 font-display text-2xl font-semibold text-off">
-              {MOVES[0].title}
-            </h3>
-            <p className="mt-3 max-w-[52ch] text-lg leading-relaxed text-off/70">
-              {MOVES[0].body}
-            </p>
-          </div>
-          <div className="flex flex-col gap-10 lg:col-span-5">
-            {MOVES.slice(1).map((move) => (
-              <div key={move.number}>
-                <span className="font-display text-sm text-off/60">
-                  {move.number}
-                </span>
-                <h3 className="mt-2 font-display text-xl font-semibold text-off">
-                  {move.title}
-                </h3>
-                <p className="mt-3 max-w-[48ch] leading-relaxed text-off/70">
-                  {move.body}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+          {MOVES.map((move) => (
+            <div
+              key={move.number}
+              className="relative pt-6 before:absolute before:top-0 before:left-0 before:h-px before:w-10 before:bg-amber"
+            >
+              <span className="font-display text-sm text-off/60">
+                {move.number}
+              </span>
+              <h3 className="mt-2 font-display text-xl font-semibold text-off sm:text-2xl">
+                {move.title}
+              </h3>
+              <p className="mt-3 leading-relaxed text-off/70">{move.body}</p>
+            </div>
+          ))}
         </div>
       </Container>
     </section>
