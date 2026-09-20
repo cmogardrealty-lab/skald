@@ -11,7 +11,7 @@ export const DESCRIPTOR = "SEO and AI visibility for local business.";
 // footer and in JSON-LD as dateModified, for the freshness signal.
 export const DATE_MODIFIED = "2026-09-19";
 
-// Placeholder domain and inbox, swap before launch.
+// Placeholder inbox, swap for a real address once a custom domain is live.
 export const AUDIT_MAILTO =
   "mailto:hello@skald.studio?subject=Free%20audit%20request";
 
@@ -26,8 +26,9 @@ export const SITE_CONFIG = {
   tagline: TAGLINE,
   description:
     "Tool-assisted web design and SEO built for the age of AI search. Skald re-imagines local business websites so they get found on Google and cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
-  // Placeholder domain, swap before launch.
-  url: "https://www.skald.studio",
+  // Current Vercel production URL, swap once a custom domain is connected.
+  url: "https://skald-amc.vercel.app",
+  // Placeholder inbox on a domain not yet owned, swap for a real address.
   email: "hello@skald.studio",
   location: "Fargo-Moorhead and remote",
   areaServed: ["Fargo", "Moorhead", "Fargo-Moorhead metro", "United States (remote)"],
