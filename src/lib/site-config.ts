@@ -1,7 +1,19 @@
-export const BRAND_NAME = "Citeworthy";
+export const BRAND_NAME = "Skald";
 
+// Skald is a product of Mogard Studios: present but quiet, never co-branded.
+export const PARENT_NAME = "Mogard Studios";
+
+export const TAGLINE = "We make you the name they say.";
+
+export const DESCRIPTOR = "SEO and AI visibility for local business.";
+
+// Bump this when homepage content meaningfully changes. Surfaced in the
+// footer and in JSON-LD as dateModified, for the freshness signal.
+export const DATE_MODIFIED = "2026-09-19";
+
+// Placeholder domain and inbox, swap before launch.
 export const AUDIT_MAILTO =
-  "mailto:hello@citeworthy.co?subject=Free%20audit%20request";
+  "mailto:hello@skald.studio?subject=Free%20audit%20request";
 
 export const NAV_LINKS = [
   { label: "Work", href: "#work" },
@@ -10,20 +22,24 @@ export const NAV_LINKS = [
 
 export const SITE_CONFIG = {
   name: BRAND_NAME,
-  tagline: "Be the answer they land on.",
+  parent: PARENT_NAME,
+  tagline: TAGLINE,
   description:
-    "Tool-assisted web design and SEO built for the age of AI search. Citeworthy re-imagines business websites so they get found on Google and cited by ChatGPT, Perplexity, and Google AI Overviews.",
-  url: "https://www.citeworthy.co",
-  email: "hello@citeworthy.co",
+    "Tool-assisted web design and SEO built for the age of AI search. Skald re-imagines local business websites so they get found on Google and cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  // Placeholder domain, swap before launch.
+  url: "https://www.skald.studio",
+  email: "hello@skald.studio",
   location: "Fargo-Moorhead and remote",
   areaServed: ["Fargo", "Moorhead", "Fargo-Moorhead metro", "United States (remote)"],
   founder: {
-    // Placeholder: swap in the real founder name before launch.
+    // Placeholder: swap in the real founder name and credentials before launch.
     name: "Founder Name",
     jobTitle: "Founder",
+    bio: "Founder Name has spent [N years] building and rebuilding local business websites, and now builds the entity and content signals that get a business cited by name, not just ranked.",
   },
   social: {
-    linkedin: "https://www.linkedin.com/company/citeworthy",
-    instagram: "https://www.instagram.com/citeworthy",
+    // Placeholder handles, swap before launch.
+    linkedin: "https://www.linkedin.com/company/skald-studio",
+    instagram: "https://www.instagram.com/skald.studio",
   },
 };

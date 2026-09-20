@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #14181f;
-  --color-slate: #232b36;
-  --color-off: #eceae3;
-  --color-amber: #f4b740;
-  --color-amber-dark: #d99f2e;
-  --color-blue: #5b8cff;
+  --color-obsidian: #0a0c11;
+  --color-basalt: #13161d;
+  --color-slate: #262d38;
+  --color-frost: #e7eaef;
+  --color-ash: #9aa3b0;
+  --color-ember: #f5b02e;
+  --color-ember-dark: #d99a22;
+  --color-glacier: #5fa8ff;
   --font-display: var(--font-bricolage), system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
 html {
@@ -24,8 +27,8 @@ html {
 
 body {
   position: relative;
-  background: var(--color-ink);
-  color: var(--color-off);
+  background: var(--color-obsidian);
+  color: var(--color-frost);
   font-family: var(--font-body);
 }
 
@@ -54,8 +57,8 @@ body::before {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(236, 234, 227, 0.16) 25%,
-    rgba(236, 234, 227, 0.16) 75%,
+    var(--color-slate) 25%,
+    var(--color-slate) 75%,
     transparent
   );
 }
@@ -63,8 +66,8 @@ body::before {
 .edge-fade {
   background: linear-gradient(
     180deg,
-    rgba(236, 234, 227, 0.14),
-    rgba(236, 234, 227, 0.03)
+    rgba(231, 234, 239, 0.14),
+    rgba(231, 234, 239, 0.03)
   );
 }
 
@@ -81,21 +84,21 @@ body::before {
 }
 
 ::selection {
-  background: var(--color-amber);
-  color: var(--color-ink);
+  background: var(--color-ember);
+  color: var(--color-obsidian);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-amber);
+  outline: 2px solid var(--color-ember);
   outline-offset: 2px;
   border-radius: 2px;
 }
 
 .highlight-sweep {
-  background-image: linear-gradient(var(--color-amber), var(--color-amber));
+  background-image: linear-gradient(var(--color-ember), var(--color-ember));
   background-repeat: no-repeat;
   background-size: 0% 100%;
-  color: var(--color-ink);
+  color: var(--color-obsidian);
   border-radius: 3px;
   padding: 0.05em 0.2em;
   margin: 0 -0.2em;

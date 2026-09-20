@@ -1,13 +1,13 @@
 export function PlaceholderMedia({ label }: { label: string }) {
   return (
     <div
-      className="relative flex aspect-video items-center justify-center overflow-hidden rounded-md bg-ink"
+      className="relative flex aspect-video items-center justify-center overflow-hidden rounded-md bg-obsidian"
       style={{
         backgroundImage:
-          "repeating-linear-gradient(135deg, rgba(236,234,227,0.05) 0px, rgba(236,234,227,0.05) 1px, transparent 1px, transparent 10px)",
+          "repeating-linear-gradient(135deg, rgba(231,234,239,0.05) 0px, rgba(231,234,239,0.05) 1px, transparent 1px, transparent 10px)",
       }}
     >
-      <span className="rounded-full border border-off/15 bg-ink/60 px-3 py-1 text-xs text-off/50 backdrop-blur-sm">
+      <span className="rounded-full border border-slate bg-obsidian/60 px-3 py-1 font-mono text-xs text-ash backdrop-blur-sm">
         {label}
       </span>
     </div>

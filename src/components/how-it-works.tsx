@@ -14,7 +14,7 @@ const MOVES = [
   {
     number: "03",
     title: "Grow",
-    body: "AI answers shift constantly and authority compounds. We track your citations, tune, and report every month, so the results keep climbing.",
+    body: "Getting recommended by AI comes from what the whole web says about you, not just your homepage. We build that reputation, track your citations across the engines, and report every month.",
   },
 ];
 
@@ -28,7 +28,7 @@ export function HowItWorks() {
       <Container>
         <h2
           id="how-it-works-heading"
-          className="font-display text-3xl font-semibold tracking-tight text-off sm:text-4xl"
+          className="font-display text-3xl font-semibold tracking-tight text-frost sm:text-4xl"
         >
           Audit. Re-imagine. Grow.
         </h2>
@@ -36,15 +36,15 @@ export function HowItWorks() {
           {MOVES.map((move) => (
             <div
               key={move.number}
-              className="relative pt-6 before:absolute before:top-0 before:left-0 before:h-px before:w-10 before:bg-amber"
+              className="relative pt-6 before:absolute before:top-0 before:left-0 before:h-px before:w-10 before:bg-ember"
             >
-              <span className="font-display text-sm text-off/60">
+              <span className="font-mono text-sm text-ash">
                 {move.number}
               </span>
-              <h3 className="mt-2 font-display text-xl font-semibold text-off sm:text-2xl">
+              <h3 className="mt-2 font-display text-xl font-semibold text-frost sm:text-2xl">
                 {move.title}
               </h3>
-              <p className="mt-3 leading-relaxed text-off/70">{move.body}</p>
+              <p className="mt-3 leading-relaxed text-ash">{move.body}</p>
             </div>
           ))}
         </div>
