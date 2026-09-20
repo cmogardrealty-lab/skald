@@ -9,7 +9,7 @@ export function Footer() {
       <Container className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex flex-col gap-1 text-sm text-ash">
           <span className="flex items-center gap-2 font-display text-base font-semibold text-frost">
-            <Logomark className="text-frost" />
+            <Logomark />
             {SITE_CONFIG.name}, by {PARENT_NAME}
           </span>
           <span>{SITE_CONFIG.location}</span>

@@ -1,9 +1,14 @@
+import { readFileSync } from "fs";
+import { join } from "path";
 import { ImageResponse } from "next/og";
 
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
 export default function Icon() {
+  const logo = readFileSync(join(process.cwd(), "public/logos/logo-plain-transparent.png"));
+  const src = `data:image/png;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -11,17 +16,13 @@ export default function Icon() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 3,
           background: "#0A0C11",
         }}
       >
-        <div style={{ width: 14, height: 10, borderRadius: 3, background: "#F5B02E", display: "flex" }} />
-        <div style={{ width: 22, height: 10, borderRadius: 3, background: "#E7EAEF", display: "flex" }} />
-        <div style={{ width: 34, height: 10, borderRadius: 3, background: "#E7EAEF", opacity: 0.75, display: "flex" }} />
-        <div style={{ width: 46, height: 10, borderRadius: 3, background: "#E7EAEF", opacity: 0.5, display: "flex" }} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} width={56} height={53} style={{ objectFit: "contain" }} alt="" />
       </div>
     ),
     { ...size }

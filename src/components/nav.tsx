@@ -32,7 +32,7 @@ export function Nav() {
       <Container className="flex h-20 items-center justify-between">
         <Link href="#top" className="flex flex-col leading-none">
           <span className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight text-frost">
-            <Logomark className="text-frost" />
+            <Logomark />
             {BRAND_NAME}
           </span>
           <span className="mt-1 font-mono text-[11px] text-ash">
