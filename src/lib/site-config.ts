@@ -11,10 +11,6 @@ export const DESCRIPTOR = "SEO and AI visibility for local business.";
 // footer and in JSON-LD as dateModified, for the freshness signal.
 export const DATE_MODIFIED = "2026-09-19";
 
-// Placeholder inbox, swap for a real address once a custom domain is live.
-export const AUDIT_MAILTO =
-  "mailto:hello@skald.studio?subject=Free%20audit%20request";
-
 export const NAV_LINKS = [
   { label: "Work", href: "#work" },
   { label: "How it works", href: "#how-it-works" },

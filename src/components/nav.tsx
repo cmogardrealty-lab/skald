@@ -2,14 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { AuditCtaButton } from "./audit-cta-button";
 import { Container } from "./container";
 import { Logomark } from "./logomark";
-import {
-  AUDIT_MAILTO,
-  BRAND_NAME,
-  NAV_LINKS,
-  PARENT_NAME,
-} from "@/lib/site-config";
+import { BRAND_NAME, NAV_LINKS, PARENT_NAME } from "@/lib/site-config";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,12 +48,9 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <Link
-            href={AUDIT_MAILTO}
-            className="rounded-md bg-ember px-4 py-2 text-sm font-medium text-obsidian transition-colors duration-200 hover:bg-ember-dark"
-          >
+          <AuditCtaButton className="rounded-md bg-ember px-4 py-2 text-sm font-medium text-obsidian transition-colors duration-200 hover:bg-ember-dark">
             Get a free audit
-          </Link>
+          </AuditCtaButton>
         </nav>
       </Container>
     </header>

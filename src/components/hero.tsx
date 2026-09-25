@@ -1,7 +1,6 @@
-import Link from "next/link";
+import { AuditCtaButton } from "./audit-cta-button";
 import { Container } from "./container";
 import { AiAnswerCard } from "./ai-answer-card";
-import { AUDIT_MAILTO } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -30,12 +29,9 @@ export function Hero() {
             Tool-assisted web design and SEO, built for the age of AI search.
             Faster than an agency, run by a human, sharper than a bot.
           </p>
-          <Link
-            href={AUDIT_MAILTO}
-            className="mt-8 inline-block rounded-md bg-ember px-6 py-3 text-base font-medium text-obsidian shadow-[0_10px_30px_-10px_rgba(245,176,46,0.55)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-ember-dark hover:shadow-[0_14px_36px_-8px_rgba(245,176,46,0.65)] active:translate-y-0"
-          >
+          <AuditCtaButton className="mt-8 inline-block rounded-md bg-ember px-6 py-3 text-base font-medium text-obsidian shadow-[0_10px_30px_-10px_rgba(245,176,46,0.55)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-ember-dark hover:shadow-[0_14px_36px_-8px_rgba(245,176,46,0.65)] active:translate-y-0">
             Get a free audit
-          </Link>
+          </AuditCtaButton>
         </div>
         <div>
           <AiAnswerCard />

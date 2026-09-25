@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
+import { AuditModal } from "@/components/audit-modal";
+import { AuditModalProvider } from "@/components/audit-modal-context";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { DATE_MODIFIED, SITE_CONFIG } from "@/lib/site-config";
@@ -103,9 +105,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Nav />
-        {children}
-        <Footer />
+        <AuditModalProvider>
+          <Nav />
+          {children}
+          <Footer />
+          <AuditModal />
+        </AuditModalProvider>
       </body>
     </html>
   );

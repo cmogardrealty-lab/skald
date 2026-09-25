@@ -1,6 +1,5 @@
-import Link from "next/link";
+import { AuditCtaButton } from "./audit-cta-button";
 import { Container } from "./container";
-import { AUDIT_MAILTO } from "@/lib/site-config";
 
 export function CtaBand() {
   return (
@@ -13,12 +12,9 @@ export function CtaBand() {
           See where you stand. The audit is free, and the gaps are yours to
           keep.
         </h2>
-        <Link
-          href={AUDIT_MAILTO}
-          className="shrink-0 rounded-md bg-ember px-6 py-3 text-base font-medium text-obsidian transition-colors duration-200 hover:bg-ember-dark"
-        >
+        <AuditCtaButton className="shrink-0 rounded-md bg-ember px-6 py-3 text-base font-medium text-obsidian transition-colors duration-200 hover:bg-ember-dark">
           Get a free audit
-        </Link>
+        </AuditCtaButton>
       </Container>
     </section>
   );
